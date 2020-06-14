@@ -1,0 +1,1 @@
+{'domain': '132.232.44.158', 'httpOnly': True, 'name': 'PHPSESSID', 'path': '/', 'secure': False, 'value': '1kuqg91m0rkiuj458dav5oj8a2'}
