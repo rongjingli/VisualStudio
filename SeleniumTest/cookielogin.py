@@ -20,5 +20,6 @@ def get_page(url):
     driver.refresh()
     time.sleep(3)
     # driver.quit()
-    
-    driver = get_page("http://132.232.44.158:9999/shopxo/")
+    return driver
+
+driver = get_page("http://132.232.44.158:9999/shopxo/")
