@@ -1,14 +1,13 @@
+import unittest,time
 from selenium import webdriver
-import unittest, time
-from po.LoginPage import LoginPage
 from po.IndexPage import IndexPage
-from utils.filetools import save
-from utils.filetools import read
+from po.LoginPage import LoginPage
 
 
 # 类的继承
-# @unittest.skip("不要想让他执行")
-class TestCaseLogin(unittest.TestCase):
+@unittest.skip("不要想让他执行")
+class TestCaseUserInfo(unittest.TestCase):
+    """ 个人信息页面 """
 
     @classmethod
     def setUpClass(cls):
@@ -26,7 +25,8 @@ class TestCaseLogin(unittest.TestCase):
     def tearDown(self):
         print("测试用例结束!")
 
-    def test_01_login(self):
+
+    def test_01_unserinfo(self):
         """ 业务逻辑, 首页--->登陆-->首页 """
         indexpage = IndexPage(self.driver)
         indexpage.go_login_page()  
@@ -34,13 +34,4 @@ class TestCaseLogin(unittest.TestCase):
         # 实例化登录页面
         loginpage = LoginPage(self.driver)
         loginpage.login("zhangsan","12345678")
-         # 保存到cookie.txt中
-        save(self.driver)
-        # 读出cookie并打印
-        print(read())
-        
         time.sleep(3)
-        self.assertEqual(self.driver.title,indexpage.title)
-
-if __name__ == "__main__":
-    unittest.main()

@@ -2,10 +2,6 @@ from selenium import webdriver
 import time, unittest
 from utils.seleniumtools import *
 
-
-# 显示等待必须加这个
-# from selenium.webdriver.support.ui import WebDriverWait
-
 # 类的继承
 @unittest.skip("不要想让他执行")
 class TestCassindex(unittest.TestCase):
