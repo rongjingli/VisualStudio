@@ -1,5 +1,7 @@
 from selenium.webdriver.support.ui import WebDriverWait
 import time
+from po.LoginPage import LoginPage
+
 
 def find_element(driver, locator, timeout=60):
     """
@@ -48,17 +50,13 @@ def assert_element_exist(driver, locator, timeout=60):
     except:
         return False
 
-# 登陆按钮存在就自动登陆
-def auto_login(driver):
     
-    login_status = ('link text', '登录')
-    # 元素存在没有
-    if assert_element_exist(driver, login_status) == True:
-        # 要去登录
-        find_element(driver, login_status).click()
-        time.sleep(3)
-        username = ('id', 'username')
-        password = ('id', 'password')
-        loginbtn = ('id', 'userLogin')
-        find_element(driver, username).send_keys("cwx123")
-        find_element(driver, password).send_keys("12345678")
+# 登陆按钮存在就自动登陆
+def auto_login1(driver):
+        login_status1 = ('link text', '登录')
+        # 元素存在没有
+        if assert_element_exist(driver, login_status1) == True:
+            find_element(driver, login_status1).click()
+            # 实例化登录页面
+            loginpage = LoginPage(driver)
+            loginpage.login("zhangsan","12345678")

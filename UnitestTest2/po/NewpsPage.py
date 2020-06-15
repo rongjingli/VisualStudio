@@ -12,9 +12,9 @@ class NewpsPage():
         self.newpassword = ("id", 'newpassword')
         self.mbbutton = ("id", 'find_password')
 
-    def Psuser(self, p,newpwd):
+    def Newps(self, p,newpwd):
         """ 
-        提交个人资料代码
+        设置密保代码
         """
         find_element(self.driver, self.password).send_keys(p)   # 原有密码
         find_element(self.driver, self.newpassword).send_keys(newpwd)   # 新密码

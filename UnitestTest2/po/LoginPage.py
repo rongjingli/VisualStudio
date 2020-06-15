@@ -18,3 +18,7 @@ class LoginPage():
         find_element(self.driver, self.username).send_keys(u)
         find_element(self.driver, self.password).send_keys(p)
         find_element(self.driver, self.userLogin).click()
+
+        # 测谈网没有用cookies()
+        # cookies= self.driver.get_cookies()
+        # print(cookies)

@@ -7,7 +7,7 @@ from utils.filetools import read
 
 
 # 类的继承
-# @unittest.skip("不要想让他执行")
+@unittest.skip("不要想让他执行")
 class TestCaseLogin(unittest.TestCase):
 
     @classmethod
@@ -34,13 +34,6 @@ class TestCaseLogin(unittest.TestCase):
         # 实例化登录页面
         loginpage = LoginPage(self.driver)
         loginpage.login("zhangsan","12345678")
-         # 保存到cookie.txt中
-        save(self.driver)
-        # 读出cookie并打印
-        print(read())
-        
         time.sleep(3)
         self.assertEqual(self.driver.title,indexpage.title)
 
-if __name__ == "__main__":
-    unittest.main()
