@@ -4,7 +4,7 @@ from po.IndexPage import IndexPage
 from po.RegistPage import RegistPage
 from po.LoginPage import LoginPage
 
-@unittest.skip("不要想让他执行")
+@unittest.skip("不要想")
 class TestCaseRegist(unittest.TestCase):
 
     @classmethod

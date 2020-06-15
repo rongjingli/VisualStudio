@@ -7,7 +7,7 @@ from utils.filetools import read
 
 
 # 类的继承
-@unittest.skip("不要想让他执行")
+@unittest.skip("不要")
 class TestCaseLogin(unittest.TestCase):
 
     @classmethod

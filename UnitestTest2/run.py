@@ -1,5 +1,5 @@
 import unittest
-from utils.HTMLTestRunner import *
+from utils.HTMLTestRunner import HTMLTestRunner
 # 1,加载所用的测试用例
 # unittest自动到case文件夹下去查找test_*.py的里面的所用继承untest.testCase的test_方法.
 testcase = unittest.defaultTestLoader.discover("case","test_*.py")

@@ -1,9 +1,9 @@
 from selenium import webdriver
 import time, unittest
-from utils.seleniumtools import *
+from utils.seleniumtools import assert_element_exist
 
 # 类的继承
-@unittest.skip("不要想让他执行")
+@unittest.skip("不")
 class TestCassindex(unittest.TestCase):
     # 类开始运行前运行一次
     @classmethod
