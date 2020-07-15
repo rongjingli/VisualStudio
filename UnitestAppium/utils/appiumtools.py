@@ -8,7 +8,7 @@ def get_driver():
     # 手机和app的信息
     desired_caps = {}
     desired_caps['platformName'] = 'Android'                    # 打开什么平台的app，固定的 > 启动安卓平台
-    desired_caps['platformVersion'] = '10'                   # 安卓系统的版本号：adb shell getprop ro.build.version.release
+    desired_caps['platformVersion'] = '7.1.2'                   # 安卓系统的版本号：adb shell getprop ro.build.version.release
     desired_caps['deviceName'] = 'V1938T'                       # 手机/模拟器的型号：adb shell getprop ro.product.model
     desired_caps['appPackage'] = 'com.znb.zxx'               # app的名字：adb shell dumpsys package XXX 
     desired_caps['appActivity'] = '.pages.splash.SplashActivity'              # 同上↑  # .pages.splash.SplashActivity   pages.main.MainActivity
@@ -16,6 +16,7 @@ def get_driver():
     desired_caps['unicodeKeyboard'] = True                      # 为了支持中文
     desired_caps['resetKeyboard'] = True                        # 设置成appium自带的键盘
     desired_caps['noReset'] = True                      # 使用app的缓存
+    desired_caps['autograntpermissions'] = True                      # 使用app的权限自动开启
 
     # 去打开app，并且返回当前app的操作对象
     driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)

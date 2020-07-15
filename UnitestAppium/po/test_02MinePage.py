@@ -8,7 +8,7 @@ class MinePage():
         self.driver = driver
         self.title = "登录"
         self.username = "158****0856"
-        # 请登陆
+        # 请登陆/用户名/编辑
         self.user_nickname = ("id", 'com.znb.zxx:id/user_nickname_view')
         # 待支付
         self.un_pay = ("id", 'com.znb.zxx:id/un_pay_part_view')
@@ -28,6 +28,6 @@ class MinePage():
 
     def login(self):
         """ 
-        进入请登陆页面
+        进入请登陆页面/编辑账号中心
         """
         find_element(self.driver, self.user_nickname).click()
