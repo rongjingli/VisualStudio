@@ -12,20 +12,13 @@ desired_caps['appActivity'] = '.ApiDemos'              # 同上↑
 desired_caps['unicodeKeyboard'] = True                      # 为了支持中文
 desired_caps['resetKeyboard'] = True                        # 设置成appium自带的键盘
 # 去打开app，并且返回当前app的操作对象
-# driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
-driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
+driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps) 
 
-driver.find_element_by_id('com.allsaprk.dh.allspark:id/et_user').send_keys('18408223928')
-driver.find_element_by_id('com.allsaprk.dh.allspark:id/et_pass').send_keys('a12345678')
-driver.find_element_by_id('com.allsaprk.dh.allspark:id/bt_login').click()
-time.sleep(3)
-driver.find_element_by_id('com.allsaprk.dh.allspark:id/rl_right').click()
-time.sleep(3)
-driver.find_element_by_id('com.allsaprk.dh.allspark:id/et_search').send_keys('a')
-e =driver.find_element_by_android_uiautomator('new UiSelector().text("佛系投资")')
-assert e.text=="佛系投资"
+
+
+driver.find_element_by_id('App').click()
+driver.find_element_by_id('Alarm').click()
+# driver.find_element_by_id('Alarm Controller').click()
+e =driver.find_element_by_android_uiautomator('new UiSelector().text("Alarm Controller")')
+assert e.text=="Alarm Controller"
 print("通过")
-
-
-
-
