@@ -1,6 +1,5 @@
 from utils.seleniumtools import find_element
 
-
 class LoginPage():
 
     def __init__(self, driver):

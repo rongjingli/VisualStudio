@@ -178,9 +178,9 @@
         
     <div class='page-header'>
         <h1>测试报告</h1>
-    <p class='attribute'><strong>开始时间:</strong> 2020-06-16 21:18:34</p>
-<p class='attribute'><strong>运行时长:</strong> 0:00:00.001004</p>
-<p class='attribute'><strong>状态:</strong> 错误 4</p>
+    <p class='attribute'><strong>开始时间:</strong> 2020-06-16 23:25:39</p>
+<p class='attribute'><strong>运行时长:</strong> 0:00:41.090626</p>
+<p class='attribute'><strong>状态:</strong> 错误 1</p>
 
     </div>
     <div style="float: left;width:50%;"><p class='description'>这个测试报告描述</p></div>
@@ -212,126 +212,37 @@
         </tr>
         
     <tr class='errorClass'>
-        <td>unittest.loader._FailedTest</td>
-        <td>4</td>
+        <td>test_04_userinfo.TestCaseUserInfo:  个人信息页面 </td>
+        <td>1</td>
         <td>0</td>
         <td>0</td>
-        <td>4</td>
-        <td><a href="javascript:showClassDetail('c1',4)">详情</a></td>
+        <td>1</td>
+        <td><a href="javascript:showClassDetail('c1',1)">详情</a></td>
     </tr>
 
 <tr id='ft1.1' class='none'>
-    <td class='errorCase'><div class='testcase'>test_01_index</div></td>
+    <td class='errorCase'><div class='testcase'>test_01_unserinfo: 业务逻辑, 首页--->登陆-->个人信息</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
     <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
         错误</a>
     <div id='div_ft1.1' class="popup_window">
         <pre>
-        ft1.1: ImportError: Failed to import test module: test_01_index
+        ft1.1: 测试用例开始!
+测试用例结束!
 Traceback (most recent call last):
-  File "D:\python\lib\unittest\loader.py", line 436, in _find_test_path
-    module = self._get_module_from_name(name)
-  File "D:\python\lib\unittest\loader.py", line 377, in _get_module_from_name
-    __import__(name)
-  File "E:\VisualStudio\UnitestTest2\case\test_01_index.py", line 3, in &lt;module&gt;
-    from utils.seleniumtools import assert_element_exist
-  File "e:\VisualStudio\UnitestTest2\utils\seleniumtools.py", line 3, in &lt;module&gt;
-    from po.LoginPage import LoginPage
-  File "e:\VisualStudio\UnitestTest2\po\LoginPage.py", line 1, in &lt;module&gt;
-    from utils.seleniumtools import find_element
-ImportError: cannot import name 'find_element' from partially initialized module 'utils.seleniumtools' (most likely due to a circular import) (e:\VisualStudio\UnitestTest2\utils\seleniumtools.py)
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-    </td>
-</tr>
-
-<tr id='ft1.2' class='none'>
-    <td class='errorCase'><div class='testcase'>test_02_login</div></td>
-    <td colspan='5' align='center'>
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.2')" >
-        错误</a>
-    <div id='div_ft1.2' class="popup_window">
-        <pre>
-        ft1.2: ImportError: Failed to import test module: test_02_login
-Traceback (most recent call last):
-  File "D:\python\lib\unittest\loader.py", line 436, in _find_test_path
-    module = self._get_module_from_name(name)
-  File "D:\python\lib\unittest\loader.py", line 377, in _get_module_from_name
-    __import__(name)
-  File "E:\VisualStudio\UnitestTest2\case\test_02_login.py", line 3, in &lt;module&gt;
-    from po.LoginPage import LoginPage
-  File "e:\VisualStudio\UnitestTest2\po\LoginPage.py", line 1, in &lt;module&gt;
-    from utils.seleniumtools import find_element
-  File "e:\VisualStudio\UnitestTest2\utils\seleniumtools.py", line 3, in &lt;module&gt;
-    from po.LoginPage import LoginPage
-ImportError: cannot import name 'LoginPage' from partially initialized module 'po.LoginPage' (most likely due to a circular import) (e:\VisualStudio\UnitestTest2\po\LoginPage.py)
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-    </td>
-</tr>
-
-<tr id='ft1.3' class='none'>
-    <td class='errorCase'><div class='testcase'>test_03_regist</div></td>
-    <td colspan='5' align='center'>
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.3')" >
-        错误</a>
-    <div id='div_ft1.3' class="popup_window">
-        <pre>
-        ft1.3: ImportError: Failed to import test module: test_03_regist
-Traceback (most recent call last):
-  File "D:\python\lib\unittest\loader.py", line 436, in _find_test_path
-    module = self._get_module_from_name(name)
-  File "D:\python\lib\unittest\loader.py", line 377, in _get_module_from_name
-    __import__(name)
-  File "E:\VisualStudio\UnitestTest2\case\test_03_regist.py", line 3, in &lt;module&gt;
-    from po.IndexPage import IndexPage
-  File "e:\VisualStudio\UnitestTest2\po\IndexPage.py", line 1, in &lt;module&gt;
-    from utils.seleniumtools import find_element
-  File "e:\VisualStudio\UnitestTest2\utils\seleniumtools.py", line 3, in &lt;module&gt;
-    from po.LoginPage import LoginPage
-  File "e:\VisualStudio\UnitestTest2\po\LoginPage.py", line 1, in &lt;module&gt;
-    from utils.seleniumtools import find_element
-ImportError: cannot import name 'find_element' from partially initialized module 'utils.seleniumtools' (most likely due to a circular import) (e:\VisualStudio\UnitestTest2\utils\seleniumtools.py)
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-    </td>
-</tr>
-
-<tr id='ft1.4' class='none'>
-    <td class='errorCase'><div class='testcase'>test_04_userinfo</div></td>
-    <td colspan='5' align='center'>
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.4')" >
-        错误</a>
-    <div id='div_ft1.4' class="popup_window">
-        <pre>
-        ft1.4: ImportError: Failed to import test module: test_04_userinfo
-Traceback (most recent call last):
-  File "D:\python\lib\unittest\loader.py", line 436, in _find_test_path
-    module = self._get_module_from_name(name)
-  File "D:\python\lib\unittest\loader.py", line 377, in _get_module_from_name
-    __import__(name)
-  File "E:\VisualStudio\UnitestTest2\case\test_04_userinfo.py", line 3, in &lt;module&gt;
-    from po.IndexPage import IndexPage
-  File "e:\VisualStudio\UnitestTest2\po\IndexPage.py", line 1, in &lt;module&gt;
-    from utils.seleniumtools import find_element
-  File "e:\VisualStudio\UnitestTest2\utils\seleniumtools.py", line 3, in &lt;module&gt;
-    from po.LoginPage import LoginPage
-  File "e:\VisualStudio\UnitestTest2\po\LoginPage.py", line 1, in &lt;module&gt;
-    from utils.seleniumtools import find_element
-ImportError: cannot import name 'find_element' from partially initialized module 'utils.seleniumtools' (most likely due to a circular import) (e:\VisualStudio\UnitestTest2\utils\seleniumtools.py)
+  File "E:\VisualStudio\UnitestTest2\case\test_04_userinfo.py", line 44, in test_01_unserinfo
+    self.driver.find_element_by_id('headpic_nav').click()
+  File "D:\python\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 360, in find_element_by_id
+    return self.find_element(by=By.ID, value=id_)
+  File "D:\python\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "D:\python\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "D:\python\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: chrome not reachable
+  (Session info: chrome=83.0.4103.97)
 
 
         </pre>
@@ -342,10 +253,10 @@ ImportError: cannot import name 'find_element' from partially initialized module
 
         <tr id='total_row'>
             <td>总计</td>
-            <td>4</td>
+            <td>1</td>
             <td>0</td>
             <td>0</td>
-            <td>4</td>
+            <td>1</td>
             <td>&nbsp;</td>
         </tr>
     </table>
@@ -380,7 +291,7 @@ ImportError: cannot import name 'find_element' from partially initialized module
                     data:[
                         {value:0, name:'通过'},
                         {value:0, name:'失败'},
-                        {value:4, name:'错误'}
+                        {value:1, name:'错误'}
                     ],
                     itemStyle: {
                         emphasis: {

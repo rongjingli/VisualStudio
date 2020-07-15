@@ -1,9 +1,12 @@
 import unittest,time
 from selenium import webdriver
-from po.IndexPage import IndexPage
+# from po.IndexPage import IndexPage
 from po.LoginPage import LoginPage
 from po.UpdateuserinfoPage import UpdateuserinfoPage
-from utils.seleniumtools import auto_login1
+from utils.seleniumtools import assert_element_exist
+from utils.seleniumtools import find_element
+
+
 # 类的继承
 # @unittest.skip("不要想让他执行")
 class TestCaseUserInfo(unittest.TestCase):
@@ -22,7 +25,15 @@ class TestCaseUserInfo(unittest.TestCase):
         print("测试用例开始!")
         self.driver.get('http://193.112.79.96:8080/ljindex/index.html')
         # 调用判断自动登陆
-        auto_login1(self.driver)
+
+        login_status1 = ('link text', '登录')
+        # 元素存在没有
+        if assert_element_exist(self.driver, login_status1) == True:
+            find_element(self.driver, login_status1).click()
+            # 实例化登录页面
+            loginpage = LoginPage(self.driver)
+            loginpage.login("zhangsan","12345678")
+        # auto_login1(self.driver)
 
     def tearDown(self):
         print("测试用例结束!")
