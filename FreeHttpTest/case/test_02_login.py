@@ -1,7 +1,8 @@
 from selenium import webdriver
 import unittest, time,requests
-from utils.dbtools import *
-from utils.filetools import *
+from utils.dbtools import chaxun
+from utils.filetools import save
+from utils.filetools import read
 
 # @unittest.skip("屏蔽类")
 class TestCaseLogin(unittest.TestCase):

@@ -178,9 +178,9 @@
         
     <div class='page-header'>
         <h1>测试报告</h1>
-    <p class='attribute'><strong>开始时间:</strong> 2020-06-14 17:45:24</p>
-<p class='attribute'><strong>运行时长:</strong> 0:00:00.480600</p>
-<p class='attribute'><strong>状态:</strong> 通过 2</p>
+    <p class='attribute'><strong>开始时间:</strong> 2020-06-16 22:51:11</p>
+<p class='attribute'><strong>运行时长:</strong> 0:00:42.182747</p>
+<p class='attribute'><strong>状态:</strong> 错误 2</p>
 
     </div>
     <div style="float: left;width:50%;"><p class='description'>这个测试报告描述</p></div>
@@ -211,25 +211,84 @@
             <td>查看</td>
         </tr>
         
-    <tr class='passClass'>
+    <tr class='errorClass'>
         <td>test_02_login.TestCaseLogin</td>
         <td>2</td>
+        <td>0</td>
+        <td>0</td>
         <td>2</td>
-        <td>0</td>
-        <td>0</td>
         <td><a href="javascript:showClassDetail('c1',2)">详情</a></td>
     </tr>
 
-<tr id='pt1.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_01_login: 这是登录方法</div></td>
+<tr id='ft1.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_01_login: 这是登录方法</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
-        通过</a>
-    <div id='div_pt1.1' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
+        错误</a>
+    <div id='div_ft1.1' class="popup_window">
         <pre>
-        pt1.1: 接口测试开始
+        ft1.1: 接口测试开始
 接口测试结束!
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "D:\python\lib\site-packages\urllib3\util\connection.py", line 84, in create_connection
+    raise err
+  File "D:\python\lib\site-packages\urllib3\util\connection.py", line 74, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\urllib3\connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "D:\python\lib\site-packages\urllib3\connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "D:\python\lib\http\client.py", line 1230, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "D:\python\lib\http\client.py", line 1276, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "D:\python\lib\http\client.py", line 1225, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\python\lib\http\client.py", line 1004, in _send_output
+    self.send(msg)
+  File "D:\python\lib\http\client.py", line 944, in send
+    self.connect()
+  File "D:\python\lib\site-packages\urllib3\connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "D:\python\lib\site-packages\urllib3\connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.HTTPConnection object at 0x000001CEC95FB1F0&gt;: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "D:\python\lib\site-packages\urllib3\connectionpool.py", line 724, in urlopen
+    retries = retries.increment(
+  File "D:\python\lib\site-packages\urllib3\util\retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='193.112.79.96', port=2333): Max retries exceeded with url: /login (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001CEC95FB1F0&gt;: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\VisualStudio\FreeHttpTest\case\test_02_login.py", line 22, in test_01_login
+    res = requests.post(url=url , json=data)
+  File "D:\python\lib\site-packages\requests\api.py", line 119, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "D:\python\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\python\lib\site-packages\requests\sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\python\lib\site-packages\requests\sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\python\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='193.112.79.96', port=2333): Max retries exceeded with url: /login (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001CEC95FB1F0&gt;: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
 
         </pre>
     </div>
@@ -237,16 +296,75 @@
     </td>
 </tr>
 
-<tr id='pt1.2' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_02_logout: 这是用户退出的方法</div></td>
+<tr id='ft1.2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_02_logout: 这是用户退出的方法</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2')" >
-        通过</a>
-    <div id='div_pt1.2' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.2')" >
+        错误</a>
+    <div id='div_ft1.2' class="popup_window">
         <pre>
-        pt1.2: 接口测试开始
+        ft1.2: 接口测试开始
 接口测试结束!
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "D:\python\lib\site-packages\urllib3\util\connection.py", line 84, in create_connection
+    raise err
+  File "D:\python\lib\site-packages\urllib3\util\connection.py", line 74, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\urllib3\connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "D:\python\lib\site-packages\urllib3\connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "D:\python\lib\http\client.py", line 1230, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "D:\python\lib\http\client.py", line 1276, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "D:\python\lib\http\client.py", line 1225, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\python\lib\http\client.py", line 1004, in _send_output
+    self.send(msg)
+  File "D:\python\lib\http\client.py", line 944, in send
+    self.connect()
+  File "D:\python\lib\site-packages\urllib3\connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "D:\python\lib\site-packages\urllib3\connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.HTTPConnection object at 0x000001CEC95DD400&gt;: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "D:\python\lib\site-packages\urllib3\connectionpool.py", line 724, in urlopen
+    retries = retries.increment(
+  File "D:\python\lib\site-packages\urllib3\util\retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='193.112.79.96', port=2333): Max retries exceeded with url: /logout (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001CEC95DD400&gt;: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\VisualStudio\FreeHttpTest\case\test_02_login.py", line 39, in test_02_logout
+    res = requests.get(url=url, headers=header)
+  File "D:\python\lib\site-packages\requests\api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "D:\python\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\python\lib\site-packages\requests\sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\python\lib\site-packages\requests\sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\python\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='193.112.79.96', port=2333): Max retries exceeded with url: /logout (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001CEC95DD400&gt;: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
 
         </pre>
     </div>
@@ -257,9 +375,9 @@
         <tr id='total_row'>
             <td>总计</td>
             <td>2</td>
+            <td>0</td>
+            <td>0</td>
             <td>2</td>
-            <td>0</td>
-            <td>0</td>
             <td>&nbsp;</td>
         </tr>
     </table>
@@ -292,9 +410,9 @@
                     radius : '60%',
                     center: ['50%', '60%'],
                     data:[
-                        {value:2, name:'通过'},
+                        {value:0, name:'通过'},
                         {value:0, name:'失败'},
-                        {value:0, name:'错误'}
+                        {value:2, name:'错误'}
                     ],
                     itemStyle: {
                         emphasis: {

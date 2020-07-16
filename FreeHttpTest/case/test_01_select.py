@@ -1,6 +1,6 @@
 import time, unittest
 import requests
-from utils.dbtools import *
+from utils.dbtools import chaxun
 
 
 
