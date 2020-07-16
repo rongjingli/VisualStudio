@@ -18,7 +18,7 @@ class TestCassindex(unittest.TestCase):
     # 在test_测试方法开始之前执行
     def setUp(self):
         print("测试用例开始!")
-        self.driver.get("http://193.112.79.96:8080/ljindex/index.html")
+        self.driver.get("http://49.232.185.181:8080/ljindex/index.html")
     
     # 在test_测试方法结束之前执行
     def tearDown(self):

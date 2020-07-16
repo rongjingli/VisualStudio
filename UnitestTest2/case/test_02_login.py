@@ -21,7 +21,7 @@ class TestCaseLogin(unittest.TestCase):
 
     def setUp(self):
         print("测试用例开始!")
-        self.driver.get('http://193.112.79.96:8080/ljindex/index.html')
+        self.driver.get('http://49.232.185.181:8080/ljindex/index.html')
         
     def tearDown(self):
         print("测试用例结束!")

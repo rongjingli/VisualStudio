@@ -48,3 +48,21 @@ def assert_element_exist(driver, locator, timeout=60):
         return True
     except:
         return False
+
+# 登陆按钮存在就自动登陆
+
+
+def auto_login(driver):
+
+    login_status = ('link text', '登录')
+    # 元素存在没有
+    if assert_element_exist(driver, login_status) == True:
+        # 要去登录
+        find_element(driver, login_status).click()
+        time.sleep(3)
+        username = ('id', 'username')
+        password = ('id', 'password')
+        loginbtn = ('id', 'userLogin')
+        find_element(driver, username).send_keys("zhangsan2")
+        find_element(driver, password).send_keys("12345678")
+        find_element(driver, loginbtn).click()

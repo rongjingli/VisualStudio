@@ -17,15 +17,16 @@ class MbPage():
         self.a3 = ("id", 'a3')
         self.mbbutton = ("id", 'set_mb_question')
 
-    def Mbuser(self, p,q1, a1,q2,a2,q3,a3):
+    def Mbuser(self, p, a1,a2,a3):
+    # def Mbuser(self, p,q1, a1,q2,a2,q3,a3):
         """ 
         提交个人资料代码
         """
         find_element(self.driver, self.password).send_keys(p)   # 原有密码
-        find_element(self.driver, self.q1).send_keys(q1)        # 问题1
+        # find_element(self.driver, self.q1).send_keys(q1)        # 问题1
         find_element(self.driver, self.a1).send_keys(a1)        # 答案1
-        find_element(self.driver, self.q2).send_keys(q2)        # 问题2
+        # find_element(self.driver, self.q2).send_keys(q2)        # 问题2
         find_element(self.driver, self.a2).send_keys(a2)        # 答案2
-        find_element(self.driver, self.q3).send_keys(q3)        # 问题3
+        # find_element(self.driver, self.q3).send_keys(q3)        # 问题3
         find_element(self.driver, self.a3).send_keys(a3)        # 答案3
         find_element(self.driver, self.mbbutton).click()      # 点击修改

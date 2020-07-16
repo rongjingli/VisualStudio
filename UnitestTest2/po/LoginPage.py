@@ -5,7 +5,7 @@ class LoginPage():
     def __init__(self, driver):
         self.driver = driver
         self.title = "登录"
-        self.url = "http://193.112.79.96:8080/ljindex/html/login.html"
+        self.url = "http://49.232.185.181:8080/ljindex/html/login.html"
         self.username = ("id", 'username')
         self.password = ("id", 'password')
         self.userLogin = ("id", 'userLogin')

@@ -178,8 +178,8 @@
         
     <div class='page-header'>
         <h1>测试报告</h1>
-    <p class='attribute'><strong>开始时间:</strong> 2020-06-16 23:25:39</p>
-<p class='attribute'><strong>运行时长:</strong> 0:00:41.090626</p>
+    <p class='attribute'><strong>开始时间:</strong> 2020-07-09 13:46:48</p>
+<p class='attribute'><strong>运行时长:</strong> 0:01:30.417690</p>
 <p class='attribute'><strong>状态:</strong> 错误 1</p>
 
     </div>
@@ -212,7 +212,7 @@
         </tr>
         
     <tr class='errorClass'>
-        <td>test_04_userinfo.TestCaseUserInfo:  个人信息页面 </td>
+        <td>test_07_question.TestCaseQuestion:  修改密码 </td>
         <td>1</td>
         <td>0</td>
         <td>0</td>
@@ -221,7 +221,7 @@
     </tr>
 
 <tr id='ft1.1' class='none'>
-    <td class='errorCase'><div class='testcase'>test_01_unserinfo: 业务逻辑, 首页--->登陆-->个人信息</div></td>
+    <td class='errorCase'><div class='testcase'>test_01_question: 用户提问页面</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
     <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
@@ -231,18 +231,15 @@
         ft1.1: 测试用例开始!
 测试用例结束!
 Traceback (most recent call last):
-  File "E:\VisualStudio\UnitestTest2\case\test_04_userinfo.py", line 44, in test_01_unserinfo
-    self.driver.find_element_by_id('headpic_nav').click()
-  File "D:\python\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 360, in find_element_by_id
-    return self.find_element(by=By.ID, value=id_)
-  File "D:\python\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 976, in find_element
-    return self.execute(Command.FIND_ELEMENT, {
-  File "D:\python\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "D:\python\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.WebDriverException: Message: chrome not reachable
-  (Session info: chrome=83.0.4103.97)
+  File "E:\VisualStudio\UnitestTest2\case\test_07_question.py", line 50, in test_01_question
+    questionPage.question(title, content, ximg, brief, new_tag)
+  File "e:\VisualStudio\UnitestTest2\po\QuestionPage.py", line 27, in question
+    find_element(self.driver, self.content).send_keys(content)  # 内容
+  File "e:\VisualStudio\UnitestTest2\utils\seleniumtools.py", line 24, in find_element
+    return WebDriverWait(driver, timeout).until(lambda s: s.find_element(*locator))
+  File "D:\python\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
 
 
         </pre>
