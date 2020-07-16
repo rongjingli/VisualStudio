@@ -54,5 +54,8 @@ class InformationPage():
         find_element(self.driver, self.permission).click()   #访问摄像投权限
         find_element(self.driver, self.camera).click()   #访问相机分类里的相片
 
-
-
+    def update_nickname(self,nickname_text):
+        """ 修改昵称 """
+        find_element(self.driver, self.nickname).click()
+        find_element(self.driver, self.nickname_settext).send_keys(nickname_text)
+        find_element(self.driver, self.complete).click()

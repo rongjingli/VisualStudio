@@ -45,7 +45,7 @@ def find_element(driver, locator, timeout=30):
             - 没找到元素：直接报错
     """
     if locator[0] == "aid":
-        locator = ("accessibility id", locator[1]) # locator:appium能够识别
+        locator = ("accessibility id", locator[1]) # locator:appium能够识别""" """  """ """
     if locator[0] == "text":
         locator = ("-android uiautomator", 'new UiSelector().text("{}")'.format(locator[1]))
 
@@ -53,8 +53,9 @@ def find_element(driver, locator, timeout=30):
 
 
 
-def is_element_exist(driver, locator, timeout=30):
+def is_element_exist(driver, locator, timeout):
     """
+    timeout=30
         方法名：判断元素是否存在
         参数：
             driver: 浏览器的句柄/把柄
@@ -70,7 +71,8 @@ def is_element_exist(driver, locator, timeout=30):
             - 没找到元素：false
     """
     try:
-        find_element(driver, locator, timeout=30)
+        find_element(driver, locator, timeout)
+        # WebDriverWait(driver,timeout).until(lambda x:x.find_element(*locator))
         return True
     except:
         return False
