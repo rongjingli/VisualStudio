@@ -62,3 +62,4 @@ def auto_login(driver):
         loginbtn = ('id', 'userLogin')
         find_element(driver, username).send_keys("cwx123")
         find_element(driver, password).send_keys("12345678")
+		find_element(driver, loginbtn).click()
