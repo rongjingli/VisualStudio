@@ -16,7 +16,7 @@ def get_driver():
     desired_caps['unicodeKeyboard'] = True                      # 为了支持中文
     desired_caps['resetKeyboard'] = True                        # 设置成appium自带的键盘
     desired_caps['noReset'] = True                      # 使用app的缓存
-    desired_caps['autograntpermissions'] = True                      # 使用app的权限自动开启
+    desired_caps["autoGrantPermissions"] = True         #自动开启权限
 
     # 去打开app，并且返回当前app的操作对象
     driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
@@ -45,7 +45,7 @@ def find_element(driver, locator, timeout=30):
             - 没找到元素：直接报错
     """
     if locator[0] == "aid":
-        locator = ("accessibility id", locator[1]) # locator:appium能够识别""" """  """ """
+        locator = ("accessibility id", locator[1]) # locator:appium能够识别
     if locator[0] == "text":
         locator = ("-android uiautomator", 'new UiSelector().text("{}")'.format(locator[1]))
 
@@ -53,9 +53,8 @@ def find_element(driver, locator, timeout=30):
 
 
 
-def is_element_exist(driver, locator, timeout):
+def is_element_exist(driver, locator, timeout=30):
     """
-    timeout=30
         方法名：判断元素是否存在
         参数：
             driver: 浏览器的句柄/把柄
@@ -71,8 +70,7 @@ def is_element_exist(driver, locator, timeout):
             - 没找到元素：false
     """
     try:
-        find_element(driver, locator, timeout)
-        # WebDriverWait(driver,timeout).until(lambda x:x.find_element(*locator))
+        find_element(driver, locator, timeout=30)
         return True
     except:
         return False

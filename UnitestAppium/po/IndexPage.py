@@ -1,4 +1,5 @@
 from utils.appiumtools import find_element
+import time
 
 class IndexPage():
     def __init__(self,driver):
@@ -26,7 +27,7 @@ class IndexPage():
         #图书
         self.book_view=('id','com.znb.zxx:id/navigator_book_view')
         
-        #我的
+        #我的com.znb.zxx:id/navigator_mine_view
         self.mine_view=('id','com.znb.zxx:id/navigator_mine_view')
 
 
@@ -35,7 +36,7 @@ class IndexPage():
             进入个人主页
         """
         find_element(self.driver,self.mine_view).click()
-        
+        # time.sleep(3)
     def go_book_page(self):
         """  
             进入图书页面
