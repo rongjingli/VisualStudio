@@ -3,8 +3,7 @@ import time
 from appium import webdriver
 
 # 类的继承
-# @unittest.skip("不")
-
+@unittest.skip("不")
 class TestCaseWan(unittest.TestCase):
 
     caps = {}

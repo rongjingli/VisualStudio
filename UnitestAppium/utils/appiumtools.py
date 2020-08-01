@@ -1,25 +1,35 @@
 from selenium.webdriver.support.ui import WebDriverWait
 from appium import webdriver
 
+
 def get_driver():
     """
         获取设备driver
     """
     # 手机和app的信息
     desired_caps = {}
-    desired_caps['platformName'] = 'Android'                    # 打开什么平台的app，固定的 > 启动安卓平台
-    desired_caps['platformVersion'] = '7.1.2'                   # 安卓系统的版本号：adb shell getprop ro.build.version.release
-    desired_caps['deviceName'] = 'V1938T'                       # 手机/模拟器的型号：adb shell getprop ro.product.model
-    desired_caps['appPackage'] = 'com.znb.zxx'               # app的名字：adb shell dumpsys package XXX 
-    desired_caps['appActivity'] = '.pages.splash.SplashActivity'              # 同上↑  # .pages.splash.SplashActivity   pages.main.MainActivity
+    # 打开什么平台的app，固定的 > 启动安卓平台
+    desired_caps['platformName'] = 'Android'
+    # 安卓系统的版本号：adb shell getprop ro.build.version.release
+    desired_caps['platformVersion'] = '10'
+    # 手机/模拟器的型号：adb shell getprop ro.product.model
+    desired_caps['deviceName'] = 'YAL-AL00'
+    # app的名字：adb shell dumpsys package XXX
+    desired_caps['appPackage'] = 'com.znb.zxx'
+    # app的名字：
+    desired_caps['appActivity'] = '.pages.splash.SplashActivity'
+    # 安卓8.1之前：adb shell dumpsys activity | findstr "mFocusedActivity"
+    # 安卓8.1之后：adb shell dumpsys activity | findstr "mResume"
 
     desired_caps['unicodeKeyboard'] = True                      # 为了支持中文
-    desired_caps['resetKeyboard'] = True                        # 设置成appium自带的键盘
+    # 设置成appium自带的键盘
+    desired_caps['resetKeyboard'] = True
     desired_caps['noReset'] = True                      # 使用app的缓存
-    desired_caps["autoGrantPermissions"] = True         #自动开启权限
+    desired_caps["autoGrantPermissions"] = True  # 自动开启权限
 
     # 去打开app，并且返回当前app的操作对象
     driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
+    # 隐士等待10秒
     driver.implicitly_wait(10)
     return driver
 
@@ -45,12 +55,12 @@ def find_element(driver, locator, timeout=30):
             - 没找到元素：直接报错
     """
     if locator[0] == "aid":
-        locator = ("accessibility id", locator[1]) # locator:appium能够识别
+        locator = ("accessibility id", locator[1])  # locator:appium能够识别
     if locator[0] == "text":
-        locator = ("-android uiautomator", 'new UiSelector().text("{}")'.format(locator[1]))
+        locator = ("-android uiautomator",
+                   'new UiSelector().text("{}")'.format(locator[1]))
 
-    return WebDriverWait(driver,timeout=30).until(lambda x:x.find_element(*locator))
-
+    return WebDriverWait(driver, timeout=30).until(lambda x: x.find_element(*locator))
 
 
 def is_element_exist(driver, locator, timeout=30):

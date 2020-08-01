@@ -8,7 +8,7 @@ from po.LoginPage import LoginPage
 # from po.InformationPage import InformationPage
 
 # 类的继承
-@unittest.skip("不")
+# @unittest.skip("不")
 class TestCaseLogin(unittest.TestCase):
 
     @classmethod

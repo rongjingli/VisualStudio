@@ -5,7 +5,7 @@ class IndexPage():
     def __init__(self,driver):
         """ 首页元素 """
         self.driver=driver
-        self.select=('id','com.znb.zxx:id/home_search_view')  #查找
+        self.select=('id','com.znb.zxx:id/home_search_view')  #搜索框[查找]
         #职业规划
         self.career_planning=('xpath','/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.RelativeLayout/android.view.ViewGroup/android.widget.LinearLayout[1]/android.widget.ImageView')  
         #资格证书
@@ -33,7 +33,7 @@ class IndexPage():
 
     def go_mine_view(self):
         """  
-            进入个人主页
+            进入我的个人主页
         """
         find_element(self.driver,self.mine_view).click()
         # time.sleep(3)
