@@ -18,4 +18,4 @@ with open(filepath,"wb") as f:
 
 
 # 3.发送邮件，发送最新测试报告html
-# send_email(filepath)
+send_email(filepath)

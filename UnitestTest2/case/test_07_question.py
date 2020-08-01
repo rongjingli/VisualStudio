@@ -37,10 +37,9 @@ class TestCaseQuestion(unittest.TestCase):
 
     def test_01_question(self):
         """用户提问页面 """
-        self.driver.find_element_by_xpath(
-            '/html/body/div[2]/div[2]/div/div[2]/div/div[1]/div[3]').click()
+        self.driver.find_element_by_xpath('html/body/div[2]/div[2]/div/div[2]/div/div[1]/div[3]').click()
+        time.sleep(3)
         usertitle = self.driver.title   
-        time.sleep(2) 
         questionPage = QuestionPage(self.driver)
         title="如何成为优秀的测试工程师"
         content="如何成为优秀的测试工程师呢" 

@@ -3,7 +3,7 @@ import time, unittest
 from utils.seleniumtools import assert_element_exist
 
 # 类的继承
-@unittest.skip("不")
+# @unittest.skip("不")
 class TestCassindex(unittest.TestCase):
     # 类开始运行前运行一次
     @classmethod
@@ -33,12 +33,12 @@ class TestCassindex(unittest.TestCase):
     # 测试主页定位问题模块
     def test_02_question(self):
         # 这是一个问题
-        jc=("xpath",'//*[@id="questsions"]/li/p')
+        jc=("xpath",'/html/body/div[2]/div[2]/div/div[1]/div[2]/div[1]/div')
         assert assert_element_exist(self.driver, jc)==True
     # 定位活跃用户模块
     def test_03_article(self):
         # 用户1952992
-        jc = ("xpath", '//*[@id="hotuser"]/li[1]/span')
+        jc = ("xpath", '/html/body/div[2]/div[2]/div/div[1]/div[5]/div[1]')
         assert assert_element_exist(self.driver, jc) == True
   
 
