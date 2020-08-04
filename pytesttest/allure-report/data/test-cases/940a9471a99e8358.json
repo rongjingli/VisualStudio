@@ -1,0 +1,67 @@
+{
+  "uid" : "940a9471a99e8358",
+  "name" : "test_02_logout",
+  "fullName" : "case.test_03_logout#test_02_logout",
+  "historyId" : "f95dc5633cbfaea8c16a54f857d25ff0",
+  "time" : {
+    "start" : 1596290173007,
+    "stop" : 1596290173038,
+    "duration" : 31
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "640121e2b7dc834b",
+      "name" : "stdout",
+      "source" : "640121e2b7dc834b.txt",
+      "type" : "text/plain",
+      "size" : 64
+    } ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 1,
+    "hasContent" : true,
+    "stepsCount" : 0
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "case"
+  }, {
+    "name" : "suite",
+    "value" : "test_03_logout"
+  }, {
+    "name" : "host",
+    "value" : "RTSK58I13S6V3IN"
+  }, {
+    "name" : "thread",
+    "value" : "2224-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "case.test_03_logout"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "940a9471a99e8358.json",
+  "parameterValues" : [ ]
+}

@@ -2,7 +2,7 @@ import pymysql
 
 def chaxun(sql):
     # db = pymysql.connect(host="192.144.148.91", user="ljtest", password="123456", db="ljtestdb")
-    db =pymysql.connect(host="193.112.79.96",user="root",password="123456",db="ljtestdb")
+    db =pymysql.connect(host="49.232.185.181",user="root",password="123456",db="ljtestdb")
     cur=db.cursor()
     cur.execute(sql)
     # 得到执行的结果
@@ -11,7 +11,7 @@ def chaxun(sql):
     return res
 
 def commit(sql):
-    db =pymysql.connect(host="193.112.79.96",user="root",password="123456",db="ljtestdb")
+    db =pymysql.connect(host="49.232.185.181",user="root",password="123456",db="ljtestdb")
     # db = pymysql.connect(host="192.144.148.91", user="ljtest", password="123456", db="ljtestdb")
     cur=db.cursor()
     cur.execute(sql)

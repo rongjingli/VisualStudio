@@ -1,3 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Tue Jun 09 08:30:30 CST 2020","Tue Jun 09 08:30:30 CST 2020","108","case","test_03_logout","","","","test_02_logout",""
-"passed","Tue Jun 09 08:30:30 CST 2020","Tue Jun 09 08:30:30 CST 2020","373","case","test_02login","","","","test_01_login",""

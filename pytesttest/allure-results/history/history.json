@@ -1,0 +1,64 @@
+{
+  "2f83e8f611a3fd60dab34befca7f4863" : {
+    "statistic" : {
+      "failed" : 2,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 2
+    },
+    "items" : [ {
+      "uid" : "e993a550e033c321",
+      "reportUrl" : "http://localhost:8080/job/aller_pytest_auto/3/allure/#testresult/e993a550e033c321",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 500 == 200\n +  where 500 = <Response [500]>.status_code",
+      "time" : {
+        "start" : 1596333541621,
+        "stop" : 1596333541691,
+        "duration" : 70
+      }
+    }, {
+      "uid" : "864e1dd8ba03f99a",
+      "reportUrl" : "http://localhost:8080/job/aller_pytest_auto/2/allure/#testresult/864e1dd8ba03f99a",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 500 == 200\n +  where 500 = <Response [500]>.status_code",
+      "time" : {
+        "start" : 1596333303760,
+        "stop" : 1596333303849,
+        "duration" : 89
+      }
+    } ]
+  },
+  "f95dc5633cbfaea8c16a54f857d25ff0" : {
+    "statistic" : {
+      "failed" : 2,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 2
+    },
+    "items" : [ {
+      "uid" : "88aa4421d2e498ae",
+      "reportUrl" : "http://localhost:8080/job/aller_pytest_auto/3/allure/#testresult/88aa4421d2e498ae",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 500 == 200\n +  where 500 = <Response [500]>.status_code",
+      "time" : {
+        "start" : 1596333541921,
+        "stop" : 1596333541951,
+        "duration" : 30
+      }
+    }, {
+      "uid" : "becce7d69599a57d",
+      "reportUrl" : "http://localhost:8080/job/aller_pytest_auto/2/allure/#testresult/becce7d69599a57d",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 401 == 200",
+      "time" : {
+        "start" : 1596333304144,
+        "stop" : 1596333304174,
+        "duration" : 30
+      }
+    } ]
+  }
+}

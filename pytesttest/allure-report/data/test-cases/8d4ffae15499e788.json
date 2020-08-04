@@ -1,0 +1,251 @@
+{
+  "uid" : "8d4ffae15499e788",
+  "name" : "test_02_logout",
+  "fullName" : "case.test_03_logout#test_02_logout",
+  "historyId" : "f95dc5633cbfaea8c16a54f857d25ff0",
+  "time" : {
+    "start" : 1596333594183,
+    "stop" : 1596333594203,
+    "duration" : 20
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "2e4b849b579317f6",
+      "name" : "stdout",
+      "source" : "2e4b849b579317f6.txt",
+      "type" : "text/plain",
+      "size" : 64
+    } ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 1,
+    "hasContent" : true,
+    "stepsCount" : 0
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "case"
+  }, {
+    "name" : "suite",
+    "value" : "test_03_logout"
+  }, {
+    "name" : "host",
+    "value" : "RTSK58I13S6V3IN"
+  }, {
+    "name" : "thread",
+    "value" : "4304-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "case.test_03_logout"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "4fed1c6a2e719819",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 500 == 200\n +  where 500 = <Response [500]>.status_code",
+      "time" : {
+        "start" : 1596333541921,
+        "stop" : 1596333541951,
+        "duration" : 30
+      }
+    }, {
+      "uid" : "e3aad4694930fbca",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 401 == 200",
+      "time" : {
+        "start" : 1596333304144,
+        "stop" : 1596333304174,
+        "duration" : 30
+      }
+    }, {
+      "uid" : "7e191f5227f51a5",
+      "status" : "broken",
+      "statusDetails" : "requests.exceptions.ConnectionError: HTTPConnectionPool(host='49.232.185.181', port=2333): Max retries exceeded with url: /logout (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000025B98BEAE80>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))",
+      "time" : {
+        "start" : 1596332931376,
+        "stop" : 1596332952384,
+        "duration" : 21008
+      }
+    }, {
+      "uid" : "891dbf9185c95fb1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1596292106699,
+        "stop" : 1596292106737,
+        "duration" : 38
+      }
+    }, {
+      "uid" : "831e3046d1a37091",
+      "status" : "passed",
+      "time" : {
+        "start" : 1596292060012,
+        "stop" : 1596292060047,
+        "duration" : 35
+      }
+    }, {
+      "uid" : "1dfcb0d4a2180ec3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1596291458671,
+        "stop" : 1596291458719,
+        "duration" : 48
+      }
+    }, {
+      "uid" : "2648e5b6d9bb194",
+      "status" : "passed",
+      "time" : {
+        "start" : 1596291242587,
+        "stop" : 1596291242618,
+        "duration" : 31
+      }
+    }, {
+      "uid" : "84c164271cea6f9d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1596290943210,
+        "stop" : 1596290943238,
+        "duration" : 28
+      }
+    }, {
+      "uid" : "58560a945ed2e459",
+      "status" : "passed",
+      "time" : {
+        "start" : 1596290642859,
+        "stop" : 1596290642893,
+        "duration" : 34
+      }
+    }, {
+      "uid" : "7789e06ce15f89e4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1596290450425,
+        "stop" : 1596290450456,
+        "duration" : 31
+      }
+    }, {
+      "uid" : "7f9867083371fa29",
+      "status" : "passed",
+      "time" : {
+        "start" : 1596290343039,
+        "stop" : 1596290343266,
+        "duration" : 227
+      }
+    }, {
+      "uid" : "940a9471a99e8358",
+      "status" : "passed",
+      "time" : {
+        "start" : 1596290173007,
+        "stop" : 1596290173038,
+        "duration" : 31
+      }
+    }, {
+      "uid" : "ec38c93aaae440c7",
+      "status" : "passed",
+      "time" : {
+        "start" : 1596290114965,
+        "stop" : 1596290114996,
+        "duration" : 31
+      }
+    }, {
+      "uid" : "bbda23a087649b7e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1596290042597,
+        "stop" : 1596290042632,
+        "duration" : 35
+      }
+    }, {
+      "uid" : "b21f7f568e24e34",
+      "status" : "broken",
+      "statusDetails" : "requests.exceptions.ConnectionError: HTTPConnectionPool(host='49.232.185.181', port=2333): Max retries exceeded with url: /logout (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000221E6F93B20>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))",
+      "time" : {
+        "start" : 1596289765958,
+        "stop" : 1596289786969,
+        "duration" : 21011
+      }
+    }, {
+      "uid" : "fdf44052893ef36c",
+      "status" : "broken",
+      "statusDetails" : "requests.exceptions.ConnectionError: HTTPConnectionPool(host='49.232.185.181', port=2333): Max retries exceeded with url: /logout (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002C58FAC4DF0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))",
+      "time" : {
+        "start" : 1596289647731,
+        "stop" : 1596289668743,
+        "duration" : 21012
+      }
+    }, {
+      "uid" : "ffd6de14676f5117",
+      "status" : "broken",
+      "statusDetails" : "requests.exceptions.ConnectionError: HTTPConnectionPool(host='49.232.185.181', port=2333): Max retries exceeded with url: /logout (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000024A49814280>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))",
+      "time" : {
+        "start" : 1596289467497,
+        "stop" : 1596289488507,
+        "duration" : 21010
+      }
+    }, {
+      "uid" : "ecf7acacfe1799c",
+      "status" : "broken",
+      "statusDetails" : "requests.exceptions.ConnectionError: HTTPConnectionPool(host='49.232.185.181', port=2333): Max retries exceeded with url: /logout (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023F21B01EB0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))",
+      "time" : {
+        "start" : 1596289307781,
+        "stop" : 1596289328794,
+        "duration" : 21013
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "88aa4421d2e498ae",
+        "reportUrl" : "http://localhost:8080/job/aller_pytest_auto/3/allure/#testresult/88aa4421d2e498ae",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert 500 == 200\n +  where 500 = <Response [500]>.status_code",
+        "time" : {
+          "start" : 1596333541921,
+          "stop" : 1596333541951,
+          "duration" : 30
+        }
+      }, {
+        "uid" : "becce7d69599a57d",
+        "reportUrl" : "http://localhost:8080/job/aller_pytest_auto/2/allure/#testresult/becce7d69599a57d",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert 401 == 200",
+        "time" : {
+          "start" : 1596333304144,
+          "stop" : 1596333304174,
+          "duration" : 30
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "8d4ffae15499e788.json",
+  "parameterValues" : [ ]
+}

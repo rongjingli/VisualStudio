@@ -1,0 +1,14 @@
+{
+  "data": {
+    "status": true, 
+    "token": "395192648dbb44bb7a176762nasgnahz63a57f0008b7ccb9e", 
+    "userinfo": {
+      "headpic": "KmyFD6s320cmbZl.jpg", 
+      "nickname": "自由的分", 
+      "uid": 103469
+    }
+  }, 
+  "msg": "登录成功！", 
+  "status": 200
+}
+
